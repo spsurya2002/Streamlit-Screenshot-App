@@ -1,6 +1,5 @@
 import streamlit as st
 from PIL import Image, ImageGrab
-import mss  # New import for cross-platform screenshots
 
 
 def take_screenshot():
@@ -8,7 +7,7 @@ def take_screenshot():
         monitor = sct.monitors[1]
         screenshot = sct.grab(monitor)
         screenshot_path = 'screenshot.png'
-        mss.tools.to_png(screenshot.rgb, screenshot.size, output=screenshot_path)
+        # mss.tools.to_png(screenshot.rgb, screenshot.size, output=screenshot_path)
         return screenshot_path
     
 if st.button("ss"):
